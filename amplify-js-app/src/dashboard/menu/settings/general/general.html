@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>OxiLight</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="general.css">
+        <script type="text/javascript" src="general.js"></script>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <img src="logo.png" class="logo" id="logo" alt="OxiLight Logo">
+            <ul>
+                <li id="dashboard">Dashboard</li>
+                <li id="help">Help</li>
+                <li id="settings" class="dropdown">Settings &#9660;
+                    <ul id="settingsDropdown">
+                        <li id="generalSettings">General Settings</li>
+                        <li id="accountSettings">Account Settings</li>
+                        <hr class="separator">
+                        <li id="signout">Sign Out</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h1 class="title">
+            General Settings
+        </h1>
+
+        <div class="tab" id="tabButtons">
+            <button id="preferencesButton">Preferences</button>
+            <button id="optionsButton">Options</button>
+        </div>
+       
+        <div class="tabContent" id="preferences">
+            <h3>Preferences</h3>
+        </div>
+        <div class="tabContent" id="options">
+            <h3>Options</h3>
+            <table>
+                <tr>
+                    <th>Temperature:</th>
+                    <td>
+                        <input type="radio" name="temperature" id="celcius">
+                        <label>C&#176;&emsp;</label>
+                        <input type="radio" name="temperature" id="farenheight">
+                        <label>F&#176;</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

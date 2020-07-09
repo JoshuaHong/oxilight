@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>OxiLight</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+
+    <body>
+        <div id="welcome" class="center">
+            <img class="logo" src="logo.png" alt="OxiLight logo">
+            <button type="button" id="showSignInButton">Sign In</button>
+            <button type="button" id="showSignUpButton">Sign Up</button>
+            <label class="center" id="slogan"><br<br><br<br><br>Innovative multispectral imaging<br>Optical solutions for food industry and environment sensing</label>
+        </div>
+
+        <form class="modal" id="signInModal">
+            <div class="modalContent animate">
+                <span id="closeSignInButton" class="close">&times;</span>
+                <label class="title">Sign In</label>
+                <label class="bold">Username</label>
+                <input id="signInUsername" class="input" type="text" placeholder="Username" required>
+                <label class="bold">Password</label>
+                <input id="signInPassword" class="input" type="password" placeholder="Password" required>
+                <span id="resetPasswordLink" class="forgotPassword">Reset password &rarr;</span>
+                <button id="signInButton" type="button">Sign In</button>
+                <span class="error" id="signInError">ERROR: Sign In</span>
+            </div>
+        </form>
+
+        <form class="modal" id="resetPasswordModal">
+            <div class="modalContent animate">
+                <span id="resetPasswordBackButton" class="back">&larr;</span>
+                <span id="closeResetPasswordButton" class="close">&times;</span>
+                <label class="title">Reset</label>
+                <label class="bold">Username</label>
+                <input id="resetPasswordUsername" class="input" type="text" placeholder="Username" required>
+                <label class="bold">Code</label>
+                <input id="resetPasswordCode" class="input" type="text" placeholder="Code" required>
+                <label class="bold">New Password</label>
+                <input id="newPassword" class="input" type="password" placeholder="Password" required>
+                <span id="sendResetCodeButton" class="forgotPassword">Send reset code</span>
+                <button id="resetPasswordButton" type="button">Confirm</button>
+                <span class="error" id="resetPasswordError">ERROR: Reset Password</span>
+            </div>
+        </form>
+
+        <form class="modal" id="signUpModal">
+            <div class="modalContent animate">
+                <span id="closeSignUpButton" class="close">&times;</span>
+                <label class="title">Sign Up</label>
+                <label class="bold">Username</label>
+                <input id="signUpUsername" class="input" type="text" placeholder="Username" required>
+                <label class="bold">Password</label>
+                <input id="signUpPassword" class="input" type="password" placeholder="Password" required>
+                <label class="bold">Email</label>
+                <input id="signUpEmail" class="input" type="text" placeholder="Email" required>
+                <span id="confirmationLink" class="forgotPassword">Confirmation &rarr;</span>
+                <button id="signUpButton" type="button">Sign Up</button>
+                <span class="error" id="signUpError">ERROR: Sign Up</span>
+            </div>
+        </form>
+
+        <form class="modal" id="confirmationModal">
+            <div class="modalContent animate">
+                <span id="confirmationBackButton" class="back">&larr;</span>
+                <span id="closeConfirmationButton" class="close">&times;</span>
+                <label class="title">Confirm</label>
+                <label class="bold">Username</label>
+                <input id="confirmationUsername" class="input" type="text" placeholder="Username" required>
+                <label class="bold">Code</label>
+                <input id="confirmationCode" class="input" type="text" placeholder="Code" required>
+                <span id="reSendConfirmationButton" class="forgotPassword">Send confirmation code</span>
+                <button id="confirmationButton" type="button">Confirm</button>
+                <span class="error" id="confirmationError">ERROR: Confirmation</span>
+            </div>
+        </form>
+    </body>
+</html>

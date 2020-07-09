@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>OxiLight</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
+        <script type="text/javascript" src="dashboard.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <img src="logo.png" class="logo" id="logo" alt="OxiLight Logo">
+            <ul>
+                <li id="dashboard">Dashboard</li>
+                <li id="help">Help</li>
+                <li id="settings" class="dropdown">Settings &#9660;
+                    <ul id="settingsDropdown">
+                        <li id="generalSettings">General Settings</li>
+                        <li id="accountSettings">Account Settings</li>
+                        <hr class="separator">
+                        <li id="signout">Sign Out</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h1 class="title">Dashboard</h1>
+
+        <div class="dashboard">
+            <div class="grid" id="heatmap"></div>
+
+            <div class="summary">
+                <h3 class="title">Summary</h3>
+                <div id="sensorData">
+                    <table>
+                        <tr>
+                            <th>Sensor ID:</th>
+                            <td id="sensorid">undefined</td>
+                        </tr>
+                        <tr>
+                            <th>Unit ID:</th>
+                            <td id="unitid">undefined</td>
+                        </tr>
+                        <tr>
+                            <th>Is Active:</th>
+                            <td id="isactive">undefined</td>
+                        </tr>
+                        <tr>
+                            <th>Date Time Registered:</th>
+                            <td id="datetimeregistered">undefined</td>
+                        </tr>
+                        <tr>
+                            <th>Date Time Activated:</th>
+                            <td id="datetimeactivated">undefined</td>
+                        </tr>
+                        <tr>
+                            <th>Date Time Disabled:</th>
+                            <td id="datetimedisabled">undefined</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="error">
+                    <span id="error"></span>
+                </div>
+                <div id="charts">
+                    <canvas id="hr"></canvas>
+                    <canvas id="rr"></canvas>
+                    <canvas id="temp"></canvas>
+                    <canvas id="so2"></canvas>
+                    <canvas id="bps"></canvas>
+                    <canvas id="bpd"></canvas>
+                    <canvas id="motiontype"></canvas>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

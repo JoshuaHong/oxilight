@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>OxiLight</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="account.css">
+        <script type="text/javascript" src="account.js"></script>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <img src="logo.png" class="logo" id="logo" alt="OxiLight Logo">
+            <ul>
+                <li id="dashboard">Dashboard</li>
+                <li id="help">Help</li>
+                <li id="settings" class="dropdown">Settings &#9660;
+                    <ul id="settingsDropdown">
+                        <li id="generalSettings">General Settings</li>
+                        <li id="accountSettings">Account Settings</li>
+                        <hr class="separator">
+                        <li id="signout">Sign Out</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h1 class="title">
+            Account Settings
+        </h1>
+
+        <div class="tab" id="tabButtons">
+            <button id="overviewButton">Overview</button>
+            <button id="emailButton">Email Settings</button>
+            <button id="passwordButton">Password Settings</button>
+        </div>
+       
+        <div class="tabContent" id="overview">
+            <h3>Overview</h3>
+            <table>
+                <tr>
+                    <th>Username:</th>
+                    <td id="username">username</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td id="overviewEmail">email</td>
+                </tr>
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="text" id="name"</td>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <td><input type="text" id="address"</td>
+                </tr>
+                <tr>
+                    <th>Birthdate:</th>
+                    <td><input type="text" id="birthdate"</td>
+                </tr>
+                <tr>
+                    <th>Phone Number:</th>
+                    <td><input type="text" id="phoneNumber"</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><button class="save" id="overviewSave">Save</button></td>
+                </tr>
+            </table>
+            <div class="message">
+                <span id="overviewMessage"></span>
+            </div>
+        </div>
+        <div class="tabContent" id="email">
+            <h3>Email Settings</h3>
+            <table>
+                <tr>
+                    <th>Current Email:</th>
+                    <td id="currentEmail">email</td>
+                </tr>
+                <tr>
+                    <th>New Email:</th>
+                    <td><input type="text" id="newEmailSave"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><button class="save" id="emailSave">Save</button></td>
+                </tr>
+            </table>
+            <table>
+                <h3>Verification</h3>
+                <tr>
+                    <th>Verification Code:</th>
+                    <td><input type="text" id="emailCode"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><button class="save" id="emailConfirm">Confirm</button></td>
+                </tr>
+            </table>
+            <div class="message">
+                <span id="emailMessage"></span>
+            </div>
+        </div>
+        <div class="tabContent" id="password">
+            <h3>Password Settings</h3>
+            <table id="verifyEmail">
+                <tr>
+                    <th>Current Password:</th>
+                    <td><input type="password" id="currentPassword"></td>
+                </tr>
+                <tr>
+                    <th>New Password:</th>
+                    <td><input type="password" id="newPassword"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><button class="save" id="passwordSave">Save</button></td>
+                </tr>
+            </table>
+            <div class="message">
+                <span id="passwordMessage"></span>
+            </div>
+        </div>
+    </body>
+</html>
