@@ -13,7 +13,7 @@ The data is designed as follows:
     * organizationname (string): The organization's name
     * datetimesigned (string): The date and time the organization signed
     * adminemail (string): The email address of the administrator
-
+<br />
 
 2. facility: This table contains information about the facility:
     * facilityid [primary key] (string): The facility's unique identification
@@ -21,13 +21,13 @@ The data is designed as follows:
     * facilityname (string): The name of the facility
     * datetimesigned (string): The date and time the facility signed
     * addresss (string): The address of the facility
-
+<br />
 
 3. unit: This table contains information about the unit:
     * unitid [primary key] (string): The unit's unique identification
     * facilityid [secondary key] (string): The facility associated to the unit
     * datetimesigned (string): The date and time the unit signed
-
+<br />
 
 4. user: This table contains information about the end user:
     * userid [primary key] (string): The user's unique identification
@@ -36,7 +36,7 @@ The data is designed as follows:
     * datetimesigned (string): The date and time the user signed
     * subscriptionlevel (string): The user's subscription level
     * email (string): The email address of the user
-
+<br />
 
 5. sensor: This table contains information about the sensor:
     * sensorid [primary key] (string): The sensor's unique identification
@@ -45,7 +45,7 @@ The data is designed as follows:
     * datetimeregistered (string): The date and time the sensor registered
     * datetimeactivated (string): The date and time the sensor activated
     * datetimedisabled (string): The date and time the sensor disabled
-
+<br />
 
 6. measurement: This table contains information about the measurements:
     * sensorid [primary key] (string): The sensor associated to the measurement
@@ -60,7 +60,7 @@ The data is designed as follows:
     * motion type (string): The motion type
     * long (string): The longitude
     * lat (string): The latitude
-
+<br />
 
 7. geo: This table contains information about the measurement's geology:
     * point [primary key] (string): The sensorid + datetime of the measurement
@@ -118,17 +118,9 @@ curl --header "Content-Type: application/json" \
     ```
     curl -X GET https://px6psk37hg.execute-api.us-east-2.amazonaws.com/prod/measurement/sensorid/1/datetime/Now
     ```
-4. Query all measurements in the table "measurement" with sensorid "1":
-    ```
-    curl -X GET https://px6psk37hg.execute-api.us-east-2.amazonaws.com/prod/measurement/sensorid/1
-    ```
-5. Query all measurements in the table "measurement" with userid "1":
+4. Query all measurements in the table "measurement" with userid "1":
     ```
     curl -X GET https://px6psk37hg.execute-api.us-east-2.amazonaws.com/prod/measurement/userid/1
-    ```
-6. Scan all geo points in the table "geo":
-    ```
-    curl -X GET https://px6psk37hg.execute-api.us-east-2.amazonaws.com/prod/geo
     ```
 
 ### Notes
