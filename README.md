@@ -77,6 +77,7 @@ The data is designed as follows:
     * motiontype (string): The motion type
 
 ### Usage
+Webpage: https://dev.d25spmiy8cngtd.amplifyapp.com
 Invoke URL:  https://px6psk37hg.execute-api.us-east-2.amazonaws.com/prod
 ##### GET
 Retrieves data associated to a given table, primary or secondary key and id, and/or sort key and id (if applicable):
