@@ -62,7 +62,7 @@
                     </table>
                 </div>
                 <div class="error">
-                    <span id="error"></span>
+                    <span id="summaryError"></span>
                 </div>
                 <div id="charts">
                     <canvas id="hr"></canvas>
@@ -72,6 +72,52 @@
                     <canvas id="bps"></canvas>
                     <canvas id="bpd"></canvas>
                     <canvas id="motiontype"></canvas>
+                </div>
+            </div>
+            <div class="rules">
+                <h3 class="title">Rules</h3>
+                <div id="ruleData">
+                    <table id="ruleTable">
+                        <tr>
+                            <th>Title</th>
+                            <th>Code</th>
+                            <th>Notifee</th>
+                            <th>Measurement</th>
+                            <th>Equality</th>
+                            <th>Value</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="title"></td>
+                            <td><input type="text" id="code"></td>
+                            <td><input type="text" id="notifee"></td>
+                            <td>
+                                <select id="measurement">
+                                    <option value="hr">HR</option>
+                                    <option value="rr">RR</option>
+                                    <option value="temp">Temp</option>
+                                    <option value="so2">SO2</option>
+                                    <option value="bps">BPS</option>
+                                    <option value="bpd">BPD</option>
+                                    <option value="motiontype">Motion Type</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="equality">
+                                    <option value="lt">&lt;</option>
+                                    <option value="le">&le;</option>
+                                    <option value="gt">&gt;</option>
+                                    <option value="ge">&ge;</option>
+                                    <option value="eq">=</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="value"></td>
+                            <td><button type="submit" id="add">Add Rule</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="error">
+                    <span id="ruleError"></span>
                 </div>
             </div>
         </div>
